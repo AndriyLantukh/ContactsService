@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/contactsdb
+    username: postgres
+    password: postgres
+    continueOnError: false
+    initialize: false
+    initialSize: 0
+    timeBetweenEvictionRunsMillis: 5000
+    minEvictableIdleTimeMillis: 5000
+    minIdle: 0
+    hikari:
+      connectionTestQuery: "SELECT 1;"
+      minimumIdle: 3
+      maximumPoolSize: 20
+      leakDetectionThreshold: 60000
+      maxLifetime: 300000
+
+server:
+  port: 8092
